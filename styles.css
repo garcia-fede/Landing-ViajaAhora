@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poetsen+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+*{
+    scroll-behavior: smooth;
+}
+.vh-50{
+    height: 73vh;
+}
+.bg-main{
+    background: #f4f2fd;
+}
+
+/* // FONTS */
+.poppins{
+    font-family: 'Poppins',sans-serif;
+}
+.montserrat{
+    font-family: 'Montserrat',sans-serif;
+}
+.poetsen-one{
+    font-family: 'Poetsen One', sans-serif;
+}
+
+/* // NAV */
+.navbar{
+    height: 8vh;
+}
+.navbar .logo span{
+    font-weight: 100;
+}
+.items{
+    list-style: none;
+}
+.items li{
+    position: relative;
+    transition: 0.3s;
+}
+.items li a{
+    color: black;
+    text-decoration: none;
+    transition: 0.1s;
+}
+.items li::before{
+    transition: 0.3s;
+    height: 2px;
+    background: rgba(0,0,0,0.6);
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    width: 0%;
+}
+.items li:hover a{
+    cursor: pointer;
+    color: rgba(0,0,0,0.6);
+}
+.items li:hover::before{
+    width: 100%;
+}
+.overlay{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.2);
+    color: white;
+}
+.overlay h1{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.overlay h1::before{
+    position: absolute;
+    height: 90%;
+    width: 5px;
+    background: white;
+    content: '';
+    left: -15px;
+}
+.overlay button{
+    font-weight: 700;
+}
+.text-balance{
+    text-wrap: balance;
+}
+.uppercase{
+    text-transform: uppercase;
+}
+.servicios-container h3{
+    width: fit-content;
+}
+.underline{
+    position: relative;
+}
+.underline::before{
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: #FEFEFE;
+    content: '';
+    bottom: -5px;
+}
+.service-box{
+    height: 450px;
+    background: #FFFFFF;
+}
+.service-box .service-title{
+    width: 75%;
+    padding: 0 12.5%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.service-box .service-title::before{
+    bottom: -5px;
+    content: '';
+    position: absolute;
+    height: 1px;
+    background: lightgray;
+    width: 100%;
+}
+.service-box ul{
+    padding: 25px 45px 0 45px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    min-height: 285px;
+}
+.service-box ul li{
+    text-decoration: none;
+    display: flex;
+    gap: 10px;
+}
+.service-box button{
+    font-size: 14px;
+}
+.box-shadow{
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2)
+}
+.customer{
+    /* background: rgba(212, 209, 209, 0.9); */
+    background: #FFFFFF;
+    height: 180px;
+    min-width: 350px;
+}
+.customer .customer-profile img{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+.customer .customer-profile{
+    padding-right: 20px;
+    border-right: 2px solid lightgray;
+}
+.customer .customer-message{
+    overflow: hidden;
+}
+.customer .customer-message a{
+    color: black;
+    text-decoration: none;
+    transition: .3s;
+    position: relative;
+}
+/* .customer .customer-message a:hover{
+    transform: translateX(12px);
+    color: gray;
+} */
+.payments-container{
+    border-top: 1px solid rgba(0,0,0,0.6);
+    border-bottom: 1px solid rgba(0,0,0,0.6);
+    padding: 0px 0;
+    margin-top: 25px;
+}
+.payment-method{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 25px;
+    border-right: 2px solid rgba(0,0,0,0.6);
+    text-transform: uppercase;
+}
+.payment-method svg{
+    width: 32px;
+    aspect-ratio: 1;
+}
+.payment-method p{
+    font-size: 13px;
+    font-weight: 600
+}
+.payment-method:nth-child(1){
+    border-left: 2px solid rgba(0,0,0,0.6);
+}
+.customer .customer-message a::before{
+    width: 0px;
+    background: black;
+    height: 100%;
+    content: '';
+    transition: .3s;
+}
+.customer .customer-message a:hover::before{
+    width: 15px;
+    height: 100%;
+    content: '';
+    background: black;
+}
+.form-container .form-hero{
+    border-right: 5px solid rgba(0,0,0,0.6);
+    display: flex;
+    align-items: center;
+}
+.form-container .form-inputs{
+    height: 300px;
+}
+.input-field {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+.input-field label {
+    margin-left: 10px;
+}
+.input-field label .label-style {
+    background: #FFF;
+    font-weight: bold;
+}
+.input-field input {
+    height: 30px;
+    margin-top: -10px;
+    z-index: -1;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+.input-container{
+    position: relative;
+    margin: 10px 0;
+}
+.input-container input, .input-container textarea{
+    border: 1px solid lightgray;
+}
+.input-container textarea{
+min-height: 100px;
+  }
+.input-container label{
+    background: white;
+    position: absolute;
+    transform: translate(10px,-50%);
+}
+footer{
+    height: 40vh;
+}
+.socials svg{
+    stroke: white;
+    transition: .3s;
+}
+.socials svg:hover{
+    scale: 1.1;
+    cursor: pointer;
+    stroke: gray;
+}
+.socials-container, .services-sitemap{
+    position: relative;
+}
+.socials-container::before, .services-sitemap::before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: white;
+    bottom: 0;
+}
+.services-sitemap ul li{
+    list-style: none;
+}
+.services-sitemap ul li a{
+    text-decoration: none;
+    color: white;
+    transition: .3s;
+}
+.services-sitemap ul li a:hover{
+    scale: 1.3;
+    color: gray;
+}
