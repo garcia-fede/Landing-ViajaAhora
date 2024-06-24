@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
     <script src="script.js"></script>
     <title>Viaja Hoy</title>
 </head>
@@ -14,8 +14,8 @@
         Servicios (3 planes)
         Reseñas/FAQ
         Contacto -->
-    <main class="container-fluid m-0 p-0 bg-light">
-        <nav class="navbar bg-light">
+    <main class="container-fluid m-0 p-0 bg-light" id="start">
+        <nav class="navbar bg-light" id="navbar">
             <div class="container-xxl">
                 <div class="logo d-flex justify-content-center align-items-center gap-1">
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-planetscale" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#121212" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -30,18 +30,30 @@
                 </div>
                 <ul class="items poppins d-flex gap-5 m-0 p-0 fw-semibold">
                     <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#cobertura">Cobertura</a></li>
+                    <li><a href="#destinos-populares">Destinos populares</a></li>
                     <li><a href="#reseñas">Reseñas</a></li>
                     <li><a href="#contacto">Contacto</a></li>
                 </ul>
             </div>
         </nav>
-        <div class="vh-50">
+        <button class="up-btn">
+            <a href="#start" class="d-flex justify-content-center align-items-center w-100 h-100">
+                <svg width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#FFF" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M12 13v-10" />
+                    <path d="M9 6l3 -3l3 3" />
+                    <path d="M12 17a2 2 0 1 1 0 4a2 2 0 0 1 0 -4z" />
+                </svg>
+            </a>
+        </button>
+        <div class="home-image-container vh-50">
             <div class="vh-50 overflow-hidden position-relative">
                 <div class="overlay">
                     <div class="container-xxl d-flex flex-column justify-content-end h-100">
                         <div class="mb-5 py-5">
                             <h1 class="poppins text-balance mb-4" style="width: 800px">Encuentra la mejor experiencia de viaje en tu destino ideal</h1>
-                            <button class="btn btn-light poppins px-4 py-3 uppercase">Comienza ahora</button>
+                            <button class="btn btn-light poppins px-4 py-3 uppercase"><a href="#servicios">Comienza ahora</a></button>
                         </div>
                     </div>
                 </div>
@@ -90,7 +102,7 @@
                                         <path d="M7 9m0 2a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2z" />
                                         <path d="M14 14m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
                                         <path d="M17 9v-2a2 2 0 0 0 -2 -2h-10a2 2 0 0 0 -2 2v6a2 2 0 0 0 2 2h2" />
-                                      </svg>
+                                    </svg>
                                     <p class="m-0 p-0">Cuotas flexibles.</p>
                                 </div>
                                 <div class="payment-method col d-flex gap-2">
@@ -101,7 +113,7 @@
                                         <path d="M3.6 15h16.8" />
                                         <path d="M11.5 3a17 17 0 0 0 0 18" />
                                         <path d="M12.5 3a17 17 0 0 1 0 18" />
-                                      </svg>
+                                    </svg>
                                     <p class="m-0 p-0">GLOBAL.</p>
                                 </div>
                             </div>
@@ -110,7 +122,7 @@
                 </div>
                 <div class="py-5"></div>
                 <h2 class="text-center text-balance poppins fs-4">
-                    Nos especializamos en asegurar losios de viaje y alojación con la mejor relación calidad-precio del mercado
+                    Nos especializamos en asegurar los medios de viaje y alojación con la mejor relación calidad-precio del mercado
                 </h2>
                 <div class="d-flex justify-content-center">
                     <div class="col-9 d-flex flex-column py-5">
@@ -166,7 +178,7 @@
                                         Traslado personal privado
                                     </li>
                                 </ul>
-                                <button class="btn btn-dark poppins uppercase w-75 py-3 fw-semibold">Me interesa</button>
+                                <button class="btn btn-dark poppins uppercase w-75 fw-semibold d-flex justify-content-center p-0"><a class="w-100 h-100 py-3" href="#contacto">Me interesa</a></button>
                             </div>
                             <div class="col service-box rounded-4 box-shadow py-5 d-flex flex-column align-items-center">
                                 <div class="service-title">
@@ -176,7 +188,7 @@
                                             <path d="M19.258 10.258l-7.258 -7.258l-9 9h2v7a2 2 0 0 0 2 2h4" />
                                             <path d="M9 21v-6a2 2 0 0 1 2 -2h1.5" />
                                             <path d="M17.8 20.817l-2.172 1.138a.392 .392 0 0 1 -.568 -.41l.415 -2.411l-1.757 -1.707a.389 .389 0 0 1 .217 -.665l2.428 -.352l1.086 -2.193a.392 .392 0 0 1 .702 0l1.086 2.193l2.428 .352a.39 .39 0 0 1 .217 .665l-1.757 1.707l.414 2.41a.39 .39 0 0 1 -.567 .411l-2.172 -1.138z" />
-                                          </svg>
+                                        </svg>
                                         PLAN B
                                     </h3>
                                 </div>
@@ -218,7 +230,7 @@
                                         Traslado personal privado
                                     </li>
                                 </ul>
-                                <button class="btn btn-dark poppins uppercase w-75 py-3 fw-semibold">Me interesa</button>
+                                <button class="btn btn-dark poppins uppercase w-75 fw-semibold d-flex justify-content-center p-0"><a class="w-100 h-100 py-3" href="#contacto">Me interesa</a></button>
                             </div>
                             <div class="col service-box rounded-4 box-shadow py-5 d-flex flex-column align-items-center">
                                 <div class="service-title">
@@ -228,8 +240,8 @@
                                             <path d="M17.8 19.817l-2.172 1.138a.392 .392 0 0 1 -.568 -.41l.415 -2.411l-1.757 -1.707a.389 .389 0 0 1 .217 -.665l2.428 -.352l1.086 -2.193a.392 .392 0 0 1 .702 0l1.086 2.193l2.428 .352a.39 .39 0 0 1 .217 .665l-1.757 1.707l.414 2.41a.39 .39 0 0 1 -.567 .411l-2.172 -1.138z" />
                                             <path d="M6.2 19.817l-2.172 1.138a.392 .392 0 0 1 -.568 -.41l.415 -2.411l-1.757 -1.707a.389 .389 0 0 1 .217 -.665l2.428 -.352l1.086 -2.193a.392 .392 0 0 1 .702 0l1.086 2.193l2.428 .352a.39 .39 0 0 1 .217 .665l-1.757 1.707l.414 2.41a.39 .39 0 0 1 -.567 .411l-2.172 -1.138z" />
                                             <path d="M12 9.817l-2.172 1.138a.392 .392 0 0 1 -.568 -.41l.415 -2.411l-1.757 -1.707a.389 .389 0 0 1 .217 -.665l2.428 -.352l1.086 -2.193a.392 .392 0 0 1 .702 0l1.086 2.193l2.428 .352a.39 .39 0 0 1 .217 .665l-1.757 1.707l.414 2.41a.39 .39 0 0 1 -.567 .411l-2.172 -1.138z" />
-                                          </svg>
-                                          PLAN C
+                                        </svg>
+                                        PLAN C
                                         </h3>
                                 </div>
                                 <ul class="montserrat">
@@ -269,8 +281,69 @@
                                         Traslado personal privado
                                     </li>
                                 </ul>
-                                <button class="btn btn-dark poppins uppercase w-75 py-3 fw-semibold">Me interesa</button>
+                                <button class="btn btn-dark poppins uppercase w-75 fw-semibold d-flex justify-content-center p-0"><a class="w-100 h-100 py-3" href="#contacto">Me interesa</a></button>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="coverage-container bg-dark d-flex justify-content-center align-items-center" id="cobertura">
+            <div class="container-xxl h-100 d-flex gap-5">
+                <div class="col-7">
+                    <img class="xd w-100" src="./imagenes/world-map.svg" alt="">
+                </div>
+                <div class="col-4 text-column ms-5 d-flex flex-column justify-content-center">
+                    <h2 class="montserrat fs-5 text-light">Contamos con la mejor cobertura para destinos hispano-hablantes</h2>
+                    <p class="montserrat text-light py-4">Ya sea para turismo o negocios, nuestros planes te ofrecen seguridad y asistencia en tu idioma, garantizando una experiencia tranquila y sin contratiempos.</p>
+                    <button class="btn btn-light w-75 montserrat py-3 fw-semibold uppercase">Más información</button>
+                </div>
+            </div>
+        </div>
+        <div class="popular-destinations-container" id="destinos-populares">
+            <div class="container-xxl py-5">
+                <h2 class="text-center text-balance poppins fs-4">
+                    Los destinos más solicitados por nuestros clientes!
+                </h2>
+                <div class="d-flex justify-content-between">
+                    <div class="destination">
+                        <img class="" src="./imagenes/cataratas.webp" alt="">
+                        <div class="destination-overlay">
+                            <div class="d-flex flex-column align-items-center mt-5">
+                                <h4 class="fs-5 poppins uppercase text-light mt-4">argentina</h4>
+                                <h3 class="poppins fs-4 text-light m-0">Cataratas del Iguazú</h3>
+                            </div>
+                            <button class="mb-5 btn btn-light uppercase w-75 montserrat d-flex justify-content-center align-items-center p-0 m-0"><a class="w-100 py-3" href="#contacto">ME INTERESA</a></button>
+                        </div>
+                    </div>
+                    <div class="destination">
+                        <img class="" src="./imagenes/rio.webp" alt="">
+                        <div class="destination-overlay">
+                            <div class="d-flex flex-column align-items-center mt-5">
+                                <h4 class="fs-5 poppins uppercase text-light mt-4">brasil</h4>
+                                <h3 class="poppins fs-4 text-light m-0">Rio de Janeiro</h3>
+                            </div>
+                            <button class="mb-5 btn btn-light uppercase w-75 montserrat d-flex justify-content-center align-items-center p-0 m-0"><a class="w-100 py-3" href="#contacto">ME INTERESA</a></button>
+                        </div>
+                    </div>
+                    <div class="destination">
+                        <img class="" src="./imagenes/montevideo.jpg" alt="">
+                        <div class="destination-overlay">
+                            <div class="d-flex flex-column align-items-center mt-5">
+                                <h4 class="fs-5 poppins uppercase text-light mt-4">uruguay</h4>
+                                <h3 class="poppins fs-4 text-light m-0">Montevideo</h3>
+                            </div>
+                            <button class="mb-5 btn btn-light uppercase w-75 montserrat d-flex justify-content-center align-items-center p-0 m-0"><a class="w-100 py-3" href="#contacto">ME INTERESA</a></button>
+                        </div>
+                    </div>
+                    <div class="destination">
+                        <img class="" src="./imagenes/cataratas.webp" alt="">
+                        <div class="destination-overlay">
+                            <div class="d-flex flex-column align-items-center mt-5">
+                                <h4 class="fs-5 poppins uppercase text-light mt-4">méxico</h4>
+                                <h3 class="poppins fs-4 text-light m-0">Cancún</h3>
+                            </div>
+                            <button class="mb-5 btn btn-light uppercase w-75 montserrat d-flex justify-content-center align-items-center p-0 m-0"><a class="w-100 py-3" href="#contacto">ME INTERESA</a></button>
                         </div>
                     </div>
                 </div>
@@ -279,7 +352,7 @@
         <div class="comments-container bg-dark pb-5" id="reseñas">
             <div class="container-xxl d-flex justify-content-center">
                 <div class="col-9 py-5 d-flex flex-column">
-                    <h3 class="underline poppins text-light mt-4" style="width: fit-content;">Algunos de nuestros clientes!</h3>
+                    <h3 class="underline poppins text-light mt-4" style="width: fit-content;">Reseñas de nuestros clientes!</h3>
                     <div class="d-flex gap-4 flex-wrap pt-5">
                         <div class="customer col d-flex justify-content-center gap-2 py-4 rounded-2">
                             <div class="col-4 customer-profile h-100 d-flex flex-column align-items-center justify-content-center gap-3">
@@ -434,6 +507,8 @@
                     <div class="services-sitemap w-75 d-flex justify-content-center">
                         <ul class="p-0 m-0 d-flex gap-5 py-3">
                             <li class="text-light"><a class="poppins uppercase" href="">Servicios</a></li>
+                            <li class="text-light"><a class="poppins uppercase" href="#cobertura">Cobertura</a></li>
+                            <li class="text-light"><a class="poppins uppercase" href="#destinos-populares">Destinos populares</a></li>
                             <li class="text-light"><a class="poppins uppercase" href="">Reseñas</a></li>
                             <li class="text-light"><a class="poppins uppercase" href="">Contacto</a></li>
                         </ul>

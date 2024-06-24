@@ -23,8 +23,19 @@
 }
 
 /* // NAV */
+.home-image-container{
+
+    margin-top: 8vh !important;
+}
+
 .navbar{
     height: 8vh;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 5;
+    transition: .5s;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
 }
 .navbar .logo span{
     font-weight: 100;
@@ -80,6 +91,10 @@
 .overlay button{
     font-weight: 700;
 }
+.overlay button a{
+    text-decoration: none;
+    color: black;
+}
 .text-balance{
     text-wrap: balance;
 }
@@ -100,6 +115,7 @@
     content: '';
     bottom: -5px;
 }
+/* SERVICES */
 .service-box{
     height: 450px;
     background: #FFFFFF;
@@ -135,9 +151,14 @@
 .service-box button{
     font-size: 14px;
 }
+.service-box button a{
+    color: white;
+    text-decoration: none;
+}
 .box-shadow{
     box-shadow: 0 10px 20px rgba(0,0,0,0.2)
 }
+/* CUSTOMERS */
 .customer{
     /* background: rgba(212, 209, 209, 0.9); */
     background: #FFFFFF;
@@ -204,6 +225,98 @@
     content: '';
     background: black;
 }
+/* COVERAGE */
+.coverage-container{
+    min-height: 70vh;
+    margin: 70px 0;
+}
+.coverage-container img{
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 1));
+}
+.coverage-container .text-column{
+    position: relative;
+}
+.coverage-container .text-column::before{
+    height: 100%;
+    width: 1px;
+    left: -30px;
+    position: absolute;
+    background: white;
+    content: '';
+}
+.coverage-container .text-column p{
+    font-size: 16px;
+}
+.coverage-container .text-column button{
+    font-size: 14px;
+}
+/* POPULAR DESTINATIONS */
+.popular-destinations-container{
+    min-height: 60vh;
+    margin: 70px 0;
+}
+.popular-destinations-container h2{
+    margin-bottom: 100px;
+}
+.destination{
+    position: relative;
+    height: 450px;
+    width: 290px;
+    overflow: hidden;
+    border: none;
+    border-radius: 10px;
+}
+.destination button a{
+    text-decoration: none;
+    color: black;
+}
+.destination img{
+    transition: .4s;
+    height: 100%;
+    scale: 1;
+}
+.destination:hover img{
+    scale: 1.1;
+}
+.destination:hover .destination-overlay{
+    backdrop-filter: blur(4px);
+}
+.destination-overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: .4s;
+    background: rgba(80, 80, 80, 0.4);
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.destination-overlay h4{
+    position: relative;
+    margin-bottom: 25px;
+}
+.destination-overlay h4::before{
+    content: '';
+    width: 70px;
+    height: 2px;
+    background: white;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+}
+.destination-overlay button{
+    font-size: 14px;
+    font-weight: 700;
+}
+/* CONTACT FORM */
+.form-container .container-xxl, .form-container .container-xxl div{
+    height: auto;
+}
 .form-container .form-hero{
     border-right: 5px solid rgba(0,0,0,0.6);
     display: flex;
@@ -239,13 +352,14 @@
     border: 1px solid lightgray;
 }
 .input-container textarea{
-min-height: 100px;
-  }
+    min-height: 100px;
+}
 .input-container label{
     background: white;
     position: absolute;
     transform: translate(10px,-50%);
 }
+/* FOOTER */
 footer{
     height: 40vh;
 }
@@ -280,4 +394,47 @@ footer{
 .services-sitemap ul li a:hover{
     scale: 1.3;
     color: gray;
+}
+/* GO UP BUTTON */
+.up-btn{
+    border: none;
+    position: fixed;
+    right: 75px;
+    bottom: 75px;
+    z-index: 5;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s
+}
+.up-btn:hover{
+    background: rgb(43, 43, 43);
+    transform: translateY(-10px);
+    border-left: none;
+    border-top: none;
+    border-right: 1px solid rgb(110, 110, 110);
+    border-bottom: 1px solid rgb(110, 110, 110);
+    animation: infinite ease-in-out up-down 0.8s;
+}
+.up-btn a{
+    transition: .3s;
+}
+.up-btn a:hover{
+    scale: 1.3;
+}
+
+@keyframes up-down {
+    0%{
+        transform: translateY(3px);
+    }
+    50%{
+        transform: translateY(-3px);
+    }
+    100%{
+        transform: translateY(3px);
+    }
 }
