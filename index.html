@@ -15,25 +15,33 @@
         Reseñas/FAQ
         Contacto -->
     <main class="container-fluid m-0 p-0 bg-light" id="start">
-        <nav class="navbar bg-light" id="navbar">
-            <div class="container-xxl">
-                <div class="logo d-flex justify-content-center align-items-center gap-1">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-planetscale" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#121212" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                        <path d="M20.993 11.63a9 9 0 0 1 -9.362 9.362l9.362 -9.362z" />
-                        <path d="M12 3a9.001 9.001 0 0 1 8.166 5.211l-11.955 11.955a9 9 0 0 1 3.789 -17.166z" />
-                        <path d="M12 12l-6 6" />
-                    </svg>
-                    <div class="d-flex text-dark">
-                        <span class="poetsen-one fs-4">ViajaHoy</span>
+        <nav class='nav'>
+            <div class='container-xxl h-100'>
+                <ul class='d-flex poppins align-items-center position-relative h-100 gap-5 px-0 mx-0 py-0 my-0'>
+                    <div class="logo d-flex justify-content-center align-items-center gap-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-planetscale" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#121212" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <path d="M20.993 11.63a9 9 0 0 1 -9.362 9.362l9.362 -9.362z" />
+                            <path d="M12 3a9.001 9.001 0 0 1 8.166 5.211l-11.955 11.955a9 9 0 0 1 3.789 -17.166z" />
+                            <path d="M12 12l-6 6" />
+                        </svg>
+                        <div class="d-flex text-dark">
+                            <span class="poetsen-one fs-4">ViajaHoy</span>
+                        </div>
                     </div>
-                </div>
-                <ul class="items poppins d-flex gap-5 m-0 p-0 fw-semibold">
-                    <li><a href="#servicios">Servicios</a></li>
-                    <li><a href="#cobertura">Cobertura</a></li>
-                    <li><a href="#destinos-populares">Destinos populares</a></li>
-                    <li><a href="#reseñas">Reseñas</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
+                    <input type="checkbox" id="hamburger_checkbox" />
+                    <label for="hamburger_checkbox" class="hamburger_button">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+                    <div class='d-flex items'>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#cobertura">Cobertura</a></li>
+                        <li><a href="#destinos-populares">Destinos populares</a></li>
+                        <li><a href="#reseñas">Reseñas</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </div>
                 </ul>
             </div>
         </nav>
@@ -47,7 +55,7 @@
                 </svg>
             </a>
         </button>
-        <div class="home-image-container vh-50">
+        <section class="home-image-container vh-50">
             <div class="vh-50 overflow-hidden position-relative">
                 <div class="overlay">
                     <div class="container-xxl d-flex flex-column justify-content-end h-100">
@@ -59,8 +67,8 @@
                 </div>
                 <img src="./imagenes/bg.jpg" class="w-100 object-fit-cover" alt="">
             </div>
-        </div>
-        <div class="main-content container-xxl bg-light">
+        </section>
+        <section class="main-content container-xxl bg-light">
             <div class="servicios-container" id="servicios">
                 <div class="payments-container d-flex justify-content-center py-4">
                     <div class="d-flex col-9 justify-content-center">
@@ -124,10 +132,10 @@
                 <h2 class="text-center text-balance poppins fs-4">
                     Nos especializamos en asegurar los medios de viaje y alojación con la mejor relación calidad-precio del mercado
                 </h2>
-                <div class="d-flex justify-content-center">
-                    <div class="col-9 d-flex flex-column py-5">
-                        <div class="d-flex w-100 gap-5 justify-content-between">
-                            <div class="col service-box rounded-4 box-shadow py-5 d-flex flex-column align-items-center">
+                <div class="row justify-content-center align-items-center ">
+                    <div class="col-xl-9 col-lg-11 d-flex flex-column py-5">
+                        <div class="d-flex service-boxes w-100 gap-5 justify-content-between align-items-center">
+                            <div class="col-lg col-md-7 col-sm-9 col-11 service-box rounded-4 box-shadow py-5 d-flex flex-column align-items-center">
                                 <div class="service-title">
                                     <h3 class="poppins fs-4 d-flex gap-2 align-items-center w-100">
                                         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-percentage" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -180,7 +188,7 @@
                                 </ul>
                                 <button class="btn btn-dark poppins uppercase w-75 fw-semibold d-flex justify-content-center p-0"><a class="w-100 h-100 py-3" href="#contacto">Me interesa</a></button>
                             </div>
-                            <div class="col service-box rounded-4 box-shadow py-5 d-flex flex-column align-items-center">
+                            <div class="col-lg col-md-7 col-sm-9 col-11 service-box rounded-4 box-shadow py-5 d-flex flex-column align-items-center">
                                 <div class="service-title">
                                     <h3 class="poppins fs-4 d-flex gap-2 align-items-center w-100">
                                         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home-star" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -232,7 +240,7 @@
                                 </ul>
                                 <button class="btn btn-dark poppins uppercase w-75 fw-semibold d-flex justify-content-center p-0"><a class="w-100 h-100 py-3" href="#contacto">Me interesa</a></button>
                             </div>
-                            <div class="col service-box rounded-4 box-shadow py-5 d-flex flex-column align-items-center">
+                            <div class="col-lg col-md-7 col-sm-9 col-11 service-box rounded-4 box-shadow py-5 d-flex flex-column align-items-center">
                                 <div class="service-title">
                                     <h3 class="poppins fs-4 d-flex gap-2 align-items-center w-100">
                                         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-stars" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -287,8 +295,8 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="coverage-container bg-dark d-flex justify-content-center align-items-center" id="cobertura">
+        </section>
+        <section class="coverage-container bg-dark d-flex justify-content-center align-items-center" id="cobertura">
             <div class="container-xxl h-100 d-flex gap-5">
                 <div class="col-7">
                     <img class="xd w-100" src="./imagenes/world-map.svg" alt="">
@@ -299,8 +307,8 @@
                     <button class="btn btn-light w-75 montserrat py-3 fw-semibold uppercase">Más información</button>
                 </div>
             </div>
-        </div>
-        <div class="popular-destinations-container" id="destinos-populares">
+        </section>
+        <section class="popular-destinations-container" id="destinos-populares">
             <div class="container-xxl py-5">
                 <h2 class="text-center text-balance poppins fs-4">
                     Los destinos más solicitados por nuestros clientes!
@@ -348,10 +356,10 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="comments-container bg-dark pb-5" id="reseñas">
+        </section>
+        <section class="comments-container bg-dark pb-5" id="reseñas">
             <div class="container-xxl d-flex justify-content-center">
-                <div class="col-9 py-5 d-flex flex-column">
+                <div class="col-md-9 col-11 py-5 d-flex flex-column">
                     <h3 class="underline poppins text-light mt-4" style="width: fit-content;">Reseñas de nuestros clientes!</h3>
                     <div class="d-flex gap-4 flex-wrap pt-5">
                         <div class="customer col d-flex justify-content-center gap-2 py-4 rounded-2">
@@ -437,8 +445,8 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="form-container d-flex justify-content-center gap-1 p-5" id="contacto">
+        </section>
+        <section class="form-container d-flex justify-content-center gap-1 p-5" id="contacto">
             <div class="container-xxl d-flex justify-content-center">
                 <div class="col-9 d-flex justify-content-between align-items-center gap-3 py-4">
                     <div class="col-5 form-hero h-100">
@@ -476,7 +484,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
         <footer class="bg-dark">
             <div class="container-xxl d-flex justify-content-center h-100">
                 <div class="col-9 d-flex flex-column justify-content-center align-items-center h-100">
