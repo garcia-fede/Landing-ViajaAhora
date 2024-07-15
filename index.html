@@ -61,7 +61,7 @@
                     <div class="container-xxl d-flex flex-column justify-content-end h-100">
                         <div class="mb-5 py-5">
                             <h1 class="poppins text-balance mb-4">Encuentra la mejor experiencia de viaje en tu destino ideal</h1>
-                            <button class="btn btn-light poppins px-4 py-3 uppercase"><a href="#servicios">Comienza ahora</a></button>
+                            <button class="btn btn-light poppins uppercase fw-semibold d-flex justify-content-center p-0"><a class="w-100 h-100 px-4 py-3" href="#contacto">Comienza ahora</a></button>
                         </div>
                     </div>
                 </div>
@@ -307,7 +307,7 @@
                 <div class="col-lg-4 col-md-9 text-column ms-5 d-flex flex-column justify-content-center mt-5 mt-lg-0">
                     <h2 class="montserrat fs-5 text-light">Contamos con la mejor cobertura para destinos hispano-hablantes</h2>
                     <p class="montserrat text-light py-4">Ya sea para turismo o negocios, nuestros planes te ofrecen seguridad y asistencia en tu idioma, garantizando una experiencia tranquila y sin contratiempos.</p>
-                    <button class="btn btn-light w-75 montserrat py-3 fw-semibold uppercase"><a href="#contacto">Contacto</a></button>
+                    <button class="btn btn-light w-75 montserrat uppercase fw-semibold d-flex justify-content-center p-0"><a class="w-100 h-100 px-4 py-3 text-dark" style="text-decoration: none;" href="#contacto">Contacto</a></button>
                 </div>
             </div>
         </section>
@@ -324,7 +324,9 @@
                                 <h4 class="fs-5 poppins uppercase text-light mt-4">argentina</h4>
                                 <h3 class="poppins fs-4 text-light m-0">Cataratas del Iguazú</h3>
                             </div>
-                            <button class="mb-5 btn btn-light uppercase w-75 montserrat d-flex justify-content-center align-items-center p-0 m-0"><a class="w-100 py-3" href="#contacto">ME INTERESA</a></button>
+                            <button class="mb-5 btn btn-light uppercase w-75 montserrat d-flex justify-content-center align-items-center p-0 m-0" data-bs-toggle="modal" data-bs-target="#modalCataratas">
+                                <a class="w-100 py-3">ME INTERESA</a>
+                            </button>
                         </div>
                     </div>
                     <div class="destination col-xl col-md-4 col-sm-9">
@@ -334,7 +336,9 @@
                                 <h4 class="fs-5 poppins uppercase text-light mt-4">brasil</h4>
                                 <h3 class="poppins fs-4 text-light m-0">Rio de Janeiro</h3>
                             </div>
-                            <button class="mb-5 btn btn-light uppercase w-75 montserrat d-flex justify-content-center align-items-center p-0 m-0"><a class="w-100 py-3" href="#contacto">ME INTERESA</a></button>
+                            <button class="mb-5 btn btn-light uppercase w-75 montserrat d-flex justify-content-center align-items-center p-0 m-0" data-bs-toggle="modal" data-bs-target="#modalRio">
+                                <a class="w-100 py-3">ME INTERESA</a>
+                            </button>
                         </div>
                     </div>
                     <div class="destination col-xl col-md-4 col-sm-9">
@@ -344,7 +348,9 @@
                                 <h4 class="fs-5 poppins uppercase text-light mt-4">uruguay</h4>
                                 <h3 class="poppins fs-4 text-light m-0">Montevideo</h3>
                             </div>
-                            <button class="mb-5 btn btn-light uppercase w-75 montserrat d-flex justify-content-center align-items-center p-0 m-0"><a class="w-100 py-3" href="#contacto">ME INTERESA</a></button>
+                            <button class="mb-5 btn btn-light uppercase w-75 montserrat d-flex justify-content-center align-items-center p-0 m-0" data-bs-toggle="modal" data-bs-target="#modalMontevideo">
+                                <a class="w-100 py-3">ME INTERESA</a>
+                            </button>
                         </div>
                     </div>
                     <div class="destination col-xl col-md-4 col-sm-9">
@@ -354,11 +360,112 @@
                                 <h4 class="fs-5 poppins uppercase text-light mt-4">méxico</h4>
                                 <h3 class="poppins fs-4 text-light m-0">Cancún</h3>
                             </div>
-                            <button class="mb-5 btn btn-light uppercase w-75 montserrat d-flex justify-content-center align-items-center p-0 m-0"><a class="w-100 py-3" href="#contacto">ME INTERESA</a></button>
+                            <button class="mb-5 btn btn-light uppercase w-75 montserrat d-flex justify-content-center align-items-center p-0 m-0" data-bs-toggle="modal" data-bs-target="#modalCancun">
+                                <a class="w-100 py-3">ME INTERESA</a>
+                            </button>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- 
+            MODALES            
+            -->
+            <div class="modal fade" id="modalCataratas" tabindex="-1" aria-labelledby="modalCataratasLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content montserrat">
+                        <div class="modal-body d-flex">
+                            <div class="col-sm-7 modal-section col-12 p-0 overflow-hidden">
+                                <img src="./imagenes/cataratas.webp" class="object-fit-cover" alt="Cataratas del Iguazú">
+                            </div>
+                            <div class="col-sm-5 modal-section col-12">
+                                <div class="px-4">
+                                    <h5 class="modal-title" id="modalCataratasLabel">Cataratas del Iguazú</h5>
+                                    <p>Las Cataratas del Iguazú son una de las maravillas naturales del mundo, ubicadas en la frontera entre Argentina y Brasil.</p>
+                                    <p class="mobile-hide">La región es rica en biodiversidad, albergando una variedad de flora y fauna. Entre los animales que se pueden observar están los coatíes y tucanes, que añaden vida al entorno natural.</p>
+                                    <p class="mobile-hide">La Garganta del Diablo es el salto más famoso, con una caída de más de 80 metros. La experiencia de escuchar su estruendo y ver la nube de vapor es inolvidable para los visitantes.</p>
+                                    <div class="buttons">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                        <button class="btn btn-dark" data-bs-dismiss="modal"><a href="#contacto" class="text-light">Contacto</a></button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="modal fade" id="modalRio" tabindex="-1" aria-labelledby="modalRioLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content montserrat">
+                        <div class="modal-body d-flex">
+                            <div class="col-sm-7 modal-section col-12 p-0 overflow-hidden">
+                                <img src="./imagenes/rio.webp" class="object-fit-cover" alt="Rio de Janeiro">
+                            </div>
+                            <div class="col-sm-5 modal-section col-12">
+                                <div class="px-4">
+                                    <h5 class="modal-title" id="modalRioLabel">Rio de Janeiro</h5>
+                                    <p>Rio de Janeiro es una ciudad vibrante de Brasil, famosa por sus playas, el Cristo Redentor y el Carnaval.</p>
+                                    <p class="mobile-hide">Copacabana e Ipanema son dos playas emblemáticas, cada una con su propia atmósfera. Copacabana es más bulliciosa, mientras que Ipanema es ideal para quienes buscan un ambiente más relajado.</p>
+                                    <p class="mobile-hide">El Carnaval de Rio es una celebración vibrante que atrae a millones de visitantes. Con desfiles de samba y música en vivo, la ciudad se llena de energía y color durante esta festividad.</p>
+                                    <div class="buttons">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                        <button class="btn btn-dark" data-bs-dismiss="modal"><a href="#contacto" class="text-light">Contacto</a></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="modalMontevideo" tabindex="-1" aria-labelledby="modalMontevideoLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content montserrat">
+                        <div class="modal-body d-flex">
+                            <div class="col-sm-7 col-12 p-0 modal-section overflow-hidden">
+                                <img src="./imagenes/montevideo.jpg" class="object-fit-cover" alt="Montevideo">
+                            </div>
+                            <div class="col-sm-5 col-12 modal-section">
+                                <div class="px-4">
+                                    <h5 class="modal-title" id="modalMontevideoLabel">Montevideo</h5>
+                                    <p>Montevideo es la capital de Uruguay, conocida por su arquitectura colonial, playas y vibrante cultura.</p>
+                                    <p class="mobile-hide">La Rambla de Montevideo, un extenso paseo costero, es un lugar popular para disfrutar de caminatas, ciclismo y vistas al Río de la Plata. Es un punto de encuentro tanto para locales como para turistas, especialmente al atardecer cuando el cielo se tiñe de colores vibrantes.</p>
+                                    <p class="mobile-hide">El Mercado del Puerto es un lugar destacado para disfrutar de la gastronomía local, donde los visitantes pueden saborear carnes asadas y platos tradicionales en un ambiente animado.</p>
+                                    <div class="buttons">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                        <button class="btn btn-dark" data-bs-dismiss="modal"><a href="#contacto" class="text-light">Contacto</a></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="modalCancun" tabindex="-1" aria-labelledby="modalCancunLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content montserrat">
+                        <div class="modal-body d-flex">
+                            <div class="col-sm-7 col-12 p-0 modal-section overflow-hidden">
+                                <img src="./imagenes/cataratas.webp" class="object-fit-cover" alt="Cancún">
+                            </div>
+                            <div class="col-sm-5 col-12 modal-section">
+                                <div class="px-4">
+                                    <h5 class="modal-title" id="modalCancunLabel">Cancún</h5>
+                                    <p>Cancún es un destino turístico en México, famoso por sus playas de arena blanca, resorts y vida nocturna.</p>
+                                    <p class="mobile-hide">Además de sus playas, Cancún es la puerta de entrada a sitios arqueológicos mayas, como Tulum y Chichen Itzá, que permiten explorar la rica herencia cultural de la región.</p>
+                                    <p class="mobile-hide">El arrecife de coral Mesoamericano, el segundo más grande del mundo, es ideal para los amantes del buceo, donde se pueden ver coloridos peces tropicales y tortugas marinas.</p>
+                                    <div class="buttons">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                        <button class="btn btn-dark" data-bs-dismiss="modal"><a href="#contacto" class="text-light">Contacto</a></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 
+            FIN MODALS
+            -->
         </section>
         <section class="comments-container bg-dark pb-5" id="reseñas">
             <div class="container-xxl d-flex justify-content-center">

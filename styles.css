@@ -135,7 +135,6 @@
 .home-image-container{
     margin-top: 8vh !important;
 }
-
 .overlay{
     position: absolute;
     height: 100%;
@@ -379,6 +378,32 @@
     font-size: 14px;
     font-weight: 700;
 }
+
+/* MODALES */
+
+.modal-body{
+    min-height: 65vh;
+    max-height: 80vh;
+    overflow: hidden;
+    padding: 0 !important;
+}
+.modal-section{
+    height: 100%;
+}
+.modal-body img{
+    height: 100%;
+}
+.modal-title{
+    padding: 45px 0 25px;
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-bottom: 1px solid black;
+    margin-bottom: 25px;
+}
+.modal-body a{
+    text-decoration: none;
+}
 /* CONTACT FORM */
 /* .form-container .container-xxl, .form-container .container-xxl div{
     height: auto;
@@ -614,6 +639,29 @@ footer{
         border: 2px solid rgba(0, 0, 0, 0.3);
         border-top: none;
     }
+    .modal-body{
+        flex-direction: column;
+    }
+    .modal-body img{
+        width: 100%;
+    }
+    .modal-section{
+        height: auto;
+        display: flex;
+    }
+    .modal-section:nth-child(2){
+        flex-grow: 1;
+    }
+    .modal-section .buttons{
+        align-self: flex-end;
+    }
+    .modal-title{
+        padding: 10px 0;
+        font-size: 16px;
+        font-weight: 700;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+        margin-bottom: 15px;
+    }
     footer{
         height: auto;
         padding: 100px 0;
@@ -639,11 +687,17 @@ footer{
     }
 }
 @media(max-width: 600px){
-    .payments-container{
-
-    }
     .payments-container .payment-method{
         width: auto;
+    }
+    .up-btn{
+        right: 15px;
+        bottom: 15px;
+        height: 50px;
+        width: 50px;
+    }
+    .mobile-hide{
+        display: none;
     }
 }
 @media(max-width:576px){
